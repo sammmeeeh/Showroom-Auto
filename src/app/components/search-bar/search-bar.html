@@ -1,0 +1,20 @@
+<div class="container">
+    <label for="brand"> Brand</label>
+    <input id="brand" type="text" placeholder="Mercedes, Audi, BMW..." #brand
+    (input)="selectAutos(brand.value)">
+    <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+</div>
+<p class="results-count">{{selectedAutos.length}} car(s) found</p>
+ 
+<div class="cars-container">
+  @for(auto of selectedAutos; track auto.id){
+    <app-car-card
+        [auto]="auto"
+        [isFavorite]="favorites.includes(auto.id)"
+        (onSeeMore)="selectCar($event)"
+        (onToggleFavorite)="toggleFavorite($event)">
+    </app-car-card>
+  } @empty {
+    <p class="empty">No car matches your search.</p>
+  }
+</div>

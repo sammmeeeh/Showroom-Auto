@@ -1,0 +1,7 @@
+<app-head-bar [favoritesCount]="favorites.length"> </app-head-bar>
+<app-search-bar [autos]="autoList" [favorites]="favorites"
+    (onSelectCar)="selectCar($event)" (onToggleFavorite)="toggleFavorite($event)"> </app-search-bar>
+
+@if(selectedCar && detailsOpen){
+    <app-car-details [car]="selectedCar" (onClose)="closeDetails()"> </app-car-details>
+}

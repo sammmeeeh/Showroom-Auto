@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+    margin: 40px 30px 0;
+    padding: 12px 22px;
+    background: #ffffff;
+    border: 1px solid #e6e2da;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(20, 23, 29, 0.08);
+}
+.container:focus-within{
+    border-color: #b08d57;
+    box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.18);
+}
+input{
+    all:unset;
+    flex: 1;
+    min-width: 0;
+    font-weight: bold;
+}
+input::placeholder{
+    color: #a3a3a3;
+    font-weight: 400;
+}
+fa-icon{
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+.container:focus-within fa-icon{
+    color: #b08d57;
+}
+label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b08d57;
+}
+
+.results-count{
+    margin: 12px 36px 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.cars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 28px;
+}
+
+.empty{
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    text-align: center;
+    color: #6b7280;
+}
+

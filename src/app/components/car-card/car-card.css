@@ -1,0 +1,143 @@
+:host{
+    display: block;
+}
+
+.auto-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e6e2da;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(20, 23, 29, 0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auto-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(20, 23, 29, 0.14);
+}
+
+.img-wrap{
+    position: relative;
+    overflow: hidden;
+    background: #efece6;
+}
+
+img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.auto-card:hover img{
+    transform: scale(1.05);
+}
+
+.badge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+    color: #2f7a4f;
+    background: #e9f5ee;
+}
+
+.badge.low{
+    color: #b4443a;
+    background: #fdecea;
+}
+
+.heart{
+    all: unset;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: #c8c8c8;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.heart:hover{
+    transform: scale(1.12);
+}
+
+.heart.active{
+    color: #e0675c;
+}
+
+.details{
+    flex: 1;
+    padding: 18px 20px 6px;
+}
+
+.brand{
+    margin: 0;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #b08d57;
+}
+
+h3{
+    margin: 4px 0 8px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+}
+
+.power{
+    margin: 0;
+    font-size: 0.88rem;
+    color: #6b7280;
+}
+
+.see_more{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px 20px 20px;
+    padding-top: 14px;
+    border-top: 1px solid #e6e2da;
+}
+
+.price{
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.price small{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.more{
+    all: unset;
+    cursor: pointer;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8c6d3f;
+    border: 1px solid #b08d57;
+    border-radius: 999px;
+    
+}
+
+.more:hover,
+.more:focus-visible{
+    background: #b08d57;
+    color: #fff;
+}
